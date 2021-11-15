@@ -1,0 +1,28 @@
+{
+  "root": "apps/highgproject-e2e",
+  "sourceRoot": "apps/highgproject-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/highgproject-e2e/cypress.json",
+        "devServerTarget": "highgproject:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "highgproject:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/highgproject-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["highgproject"]
+}

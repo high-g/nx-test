@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "highgproject": "apps/highgproject",
+    "highgproject-e2e": "apps/highgproject-e2e"
+  }
+}
